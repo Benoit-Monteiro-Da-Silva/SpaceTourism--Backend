@@ -1,0 +1,120 @@
+name: Technologies
+description: ''
+endpoints:
+  -
+    httpMethods:
+      - GET
+    uri: api/technologies
+    metadata:
+      groupName: Technologies
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Fetch all Technologies'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          [
+
+           {
+                "id": 1,
+                "name": "Launch vehicle",
+                "description": "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!",
+                "image_portrait": "seed/image-launch-vehicle-portrait.jpg",
+                "image_landscape": "seed/image-launch-vehicle-landscape.jpg",
+                "created_at": "2025-05-01T15:50:39.000000Z",
+                "updated_at": "2025-05-01T15:50:39.000000Z"
+           },
+
+           {
+                "id": 2,
+                "name": "Spaceport",
+                "description": "A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, by analogy to the seaport for ships or airport for aircraft. Based in the famous Cape Canaveral, our spaceport is ideally situated to take advantage of the Earth’s rotation for launch.",
+                "image_portrait": "seed/image-spaceport-portrait.jpg",
+                "image_landscape": "seed/image-spaceport-landscape.jpg",
+                "created_at": "2025-05-01T15:50:39.000000Z",
+                "updated_at": "2025-05-01T15:50:39.000000Z"
+           },
+
+          ...
+
+          ]
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []
+  -
+    httpMethods:
+      - GET
+    uri: 'api/technologies/{id}'
+    metadata:
+      groupName: Technologies
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Fetch one specific Technology'
+      description: ''
+      authenticated: false
+      custom: []
+    headers:
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        name: id
+        description: 'The ID of the technology.'
+        required: true
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        custom: []
+    cleanUrlParameters:
+      id: architecto
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        status: 200
+        content: |-
+          {
+                "id": 1,
+                "name": "Launch vehicle",
+                "description": "A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, it's quite an awe-inspiring sight on the launch pad!",
+                "image_portrait": "seed/image-launch-vehicle-portrait.jpg",
+                "image_landscape": "seed/image-launch-vehicle-landscape.jpg",
+                "created_at": "2025-05-01T15:50:39.000000Z",
+                "updated_at": "2025-05-01T15:50:39.000000Z"
+           },
+        headers: []
+        description: ''
+        custom: []
+    responseFields: []
+    auth: []
+    controller: null
+    method: null
+    route: null
+    custom: []

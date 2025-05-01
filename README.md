@@ -33,3 +33,11 @@ Clone the repository, then run the following commands in your terminal:
 Start the local server with the command: 
 
 - php artisan serve
+
+---
+
+## API Documentation
+
+The API documentation is generated with Scribe.
+
+You can access it at : http://localhost/docs
