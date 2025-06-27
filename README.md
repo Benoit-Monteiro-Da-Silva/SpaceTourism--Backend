@@ -25,6 +25,7 @@ Clone the repository, then run the following commands in your terminal:
 - php artisan storage:link
 - cp .env.example .env
 - php artisan key:generate
+- php artisan migrate:fresh
 
 ---
 
