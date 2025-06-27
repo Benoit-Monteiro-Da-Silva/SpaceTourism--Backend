@@ -33,7 +33,6 @@ class DestinationController extends Controller
     }
 
     public function store(StoreDestinationRequest $request) {
-
         //On récupère l'image envoyée par le formulaire
         $image = $request->validated('image_png');
 
@@ -52,7 +51,6 @@ class DestinationController extends Controller
         if(!$destination) {
             return back()->withStatus('error')->withMessage('An error has occured!');
         }
-
         return redirect()->route('list_destinations')->withStatus('success')->withMessage('New Destination created!');
     }
 
@@ -62,7 +60,6 @@ class DestinationController extends Controller
     }
 
     public function update(UpdateDestinationRequest $request, $id) {
-
         $destination = Destination::findOrFail($id);
 
         $image = $request->validated('image_png');
@@ -84,21 +81,16 @@ class DestinationController extends Controller
         if(!$isUpdated) {
             return back()->widhStatus('error')->withMessage('An error has occured!');
         }
-
         return redirect()->route('list_destinations')->withStatus('success')->withMessage('Destination updated!');
     }
 
     public function destroy($id) {
-
         $destination = Destination::findOrFail($id);
-
         $isDeleted = $destination->delete();
         if(!$isDeleted) {
             return back()->withStatus('error')->withMessage('An error has occured!');
         }
-        
         $this->imageService->delete($destination->image_png);
-
         return back()->withStatus('success')->withMessage('Destination has been deleted!');
     }
 }

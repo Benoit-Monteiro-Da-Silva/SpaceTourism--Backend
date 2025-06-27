@@ -40,4 +40,4 @@ Start the local server with the command:
 
 The API documentation is generated with Scribe.
 
-You can access it at : http://localhost/docs
+-> http://localhost:8000/docs
